@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To QrCode</title>
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/qrcode.min.js" async></script>
+  <script src="/assets/js/main.js" async defer></script>
+</head>
+<body>
+  <div class="root">
+
+    <div class="types-container">
+      <button data-type="vCard">VCard</button>
+      <button data-type="Link">Link</button>
+    </div>
+
+    <form class="vcard-container" data-form-type="vCard">
+      <h2>VCard Information</h2>
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Phone Number">
+        <input type="text" name="cellphone" placeholder="Cellphone Number">
+        <input type="text" name="company" placeholder="Company">
+        <input type="text" name="job" placeholder="Job Title">
+        <input type="text" name="website" placeholder="Website">
+        <input type="text" name="address" placeholder="Address">
+        <input type="text" name="city" placeholder="City">
+        <input type="text" name="state" placeholder="State">
+        <input type="text" name="code" placeholder="Zip Code">
+        <input type="text" name="country" placeholder="Country">
+        <button>Generate</button>
+    </form>
+
+    <form class="link-container" data-form-type="Link">
+      <h2>Link Information</h2>
+        <input type="text" placeholder="URL" required>
+        <button>Generate</button>
+    </form>
+
+    <div class="canvas" id="qrcode">
+    </div>
+    <button id="download-png">download PNG</button>
+    <button id="download-svg">download SVG</button>
+
+    <div id="to-svg"></div>
+
+  </div>
+</body>
+</html>
